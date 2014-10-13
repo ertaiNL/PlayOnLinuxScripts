@@ -1,9 +1,9 @@
 #!/bin/bash
 # Date : (2014-10-10 18:32)
-# Last Revision : (2014-10-10 22:07)
-# Wine Version used : 1.4.1
+# Last Revision : (2014-10-13 23:47)
+# Wine Version used : 1.6.2-scummvm_support
 # Distribution used to test : Ubuntu 14.04
-# Author: Ertai
+# Author: ertaiNL
 # Script license : GPL v2
 # Programm license : Retail
 # Depend :
