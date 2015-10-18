@@ -17,7 +17,8 @@ PUBLISHER="Firefly Studios"
 PUBLISHER_URL="http://www.fireflyworlds.com/"
 AUTHOR="ErtaiNL"
 WORKING_WINE_VERSION="1.6.2-scummvm_support"
-CD_PATH="disk1/"
+CD_PATH="Disk1"
+CD_INSTALL_FILE="Setup.exe"
 STARTUP_FILE="Stronghold Crusader.exe"
  
 POL_SetupWindow_Init
@@ -25,13 +26,13 @@ POL_SetupWindow_Init
 POL_SetupWindow_presentation "$TITLE" "$PUBLISHER" "$PUBLISHER_URL" "$AUTHOR" "$PREFIX"
  
 POL_SetupWindow_cdrom
-POL_SetupWindow_check_cdrom "$CD_FILE_TO_CHECK"
+POL_SetupWindow_check_cdrom "$CD_PATH/$STARTUP_FILE"
  
 POL_Wine_SelectPrefix "$PREFIX"
 POL_Wine_PrefixCreate "$WORKING_WINE_VERSION"
   
 # Check the disc again since the user could have removed it at this point
-POL_SetupWindow_check_cdrom "$CD_PATH/$CD_FILE_TO_CHECK"
+POL_SetupWindow_check_cdrom "$CD_PATH/$STARTUP_FILE"
 POL_Wine start /unix "$CDROM/$CD_PATH/$CD_INSTALL_FILE"
 POL_Wine_WaitExit
   
