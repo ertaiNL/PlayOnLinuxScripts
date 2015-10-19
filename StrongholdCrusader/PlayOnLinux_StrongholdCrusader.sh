@@ -22,6 +22,7 @@ CD_INSTALL_FILE="Setup.exe"
 STARTUP_FILE="Stronghold Crusader.exe"
 
 POL_SetupWindow_Init
+POL_Debug_Init
 
 POL_SetupWindow_presentation "$TITLE" "$PUBLISHER" "$PUBLISHER_URL" "$AUTHOR" "$PREFIX"
 
@@ -33,8 +34,10 @@ POL_Wine_PrefixCreate "$WORKING_WINE_VERSION"
 
 # Check the disc again since the user could have removed it at this point
 POL_SetupWindow_check_cdrom "$CD_PATH/$STARTUP_FILE"
-POL_Wine start /unix "$CDROM/$CD_PATH/$CD_INSTALL_FILE"
+POL_Wine "$CDROM/$CD_PATH/$CD_INSTALL_FILE"
 POL_Wine_WaitExit
+
+POL_SetupWindow_message "$(eval_gettext 'NOTICE: If you get an error the first time you start Stronghold Crusader. Normally it works the second time.')" "$TITLE"
 
 POL_Shortcut "$STARTUP_FILE" "$TITLE"
 
