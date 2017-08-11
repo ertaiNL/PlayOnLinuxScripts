@@ -1,8 +1,8 @@
 #!/bin/bash
 # Date : (2014-10-10 18:32)
-# Last Revision : (2015-10-18 22:18)
-# Wine Version used : 1.6.2-scummvm_support
-# Distribution used to test : Ubuntu 15.04
+# Last Revision : (2017-08-11 16:15)
+# Wine Version used : 2.13
+# Distribution used to test : Ubuntu 16.04
 # Author: ertaiNL
 # Script license : GPL v2
 # Programm license : Retail
@@ -16,7 +16,7 @@ PREFIX="StrongholdCrusader"
 PUBLISHER="Firefly Studios"
 PUBLISHER_URL="http://www.fireflyworlds.com/"
 AUTHOR="ErtaiNL"
-WORKING_WINE_VERSION="1.6.2-scummvm_support"
+WORKING_WINE_VERSION="2.13"
 CD_PATH="Disk1"
 CD_INSTALL_FILE="Setup.exe"
 STARTUP_FILE="Stronghold Crusader.exe"
